@@ -52,6 +52,7 @@ namespace AufgabeIndustrieroboterSteuerung
                 {
                     throw new InvalidOperationException("Der Platz ist bereits leer.");
                 }
+                Console.WriteLine($"{Werkzeugkasten[index]} auf Platz {index} wurde entfernt.");
                 Werkzeugkasten[index] = null;
                 return true;
             }

@@ -16,7 +16,7 @@ namespace AufgabeIndustrieroboterSteuerung
 
         public override string Ausgeben()
         {
-            return $"Bohrer: ID={Id}, Bezeichner={Bezeichner}, Art={Art}, Verschleiss={Verschleiss}, Groesse={groesse}";
+            return $"Bohrer: ID={Id}, Bezeichner={Bezeichner}, Art={Art}, Verschleiss={Verschleiss}%, Groesse={groesse}mm";
         }
         public override void Arbeiten()
         {
