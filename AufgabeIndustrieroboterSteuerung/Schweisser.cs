@@ -6,9 +6,19 @@ namespace AufgabeIndustrieroboterSteuerung
 {
     internal class Schweisser : Werkzeug
     {
-        public void Ausgeben()
+        public override string Ausgeben()
         {
-            Console.WriteLine($"Schweisser: ID={id}, Bezeichner={bezeichner}, Art={art}, Verschleiss={verschleiss}");
+            return $"Schweisser: ID={Id}, Bezeichner={Bezeichner}, Art={Art}, Verschleiss={Verschleiss}";
+        }
+        public override void Arbeiten()
+        {
+            Console.WriteLine("Der Schweisser arbeitet.");
+            verschleiss += 2;
+        }
+
+         public Schweisser(string art, int verschleiss)
+             : base(art, verschleiss)
+         {
         }
     }
 }

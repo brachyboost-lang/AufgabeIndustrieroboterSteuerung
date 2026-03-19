@@ -9,16 +9,18 @@ namespace AufgabeIndustrieroboterSteuerung
         private int id;
         public int Id { get => id; set { id = value;} }
         private string bezeichner;
-        private string art;
+        public string Bezeichner { get => bezeichner; set { bezeichner = value;} }
+        public string Art { get; set { field = value;} }
         private protected int verschleiss = 0;
+        public int Verschleiss { get => verschleiss; set { verschleiss = value;} }
 
-        public Werkzeug(int id, string bezeichner, string art)
+        public Werkzeug(string art, int verschleiss)
         {
-            this.id = id;
-            this.bezeichner = bezeichner;
-            this.art = art;
+            this.Art = Art;
+            this.verschleiss = Verschleiss;
         }
         public abstract string Ausgeben();
+        public abstract void Arbeiten();
         
     }
 }
