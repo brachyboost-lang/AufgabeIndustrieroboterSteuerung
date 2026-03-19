@@ -11,12 +11,13 @@ namespace AufgabeIndustrieroboterSteuerung
         public Bohrer(string art, int verschleiss, int groesse)
             : base(art, verschleiss)
         {
+            this.Bezeichner = "Bohrer";
             this.groesse = groesse;
         }
 
         public override string Ausgeben()
         {
-            return $"Bohrer: ID={Id}, Bezeichner={Bezeichner}, Art={Art}, Verschleiss={Verschleiss}%, Groesse={groesse}mm";
+            return $"Bohrer mit Groesse {groesse} (Verschleiss {Verschleiss}%)";
         }
         public override void Arbeiten()
         {

@@ -10,7 +10,7 @@ namespace AufgabeIndustrieroboterSteuerung
 
         public override string Ausgeben()
         {
-            return $"Greifer: ID{Id}, Bezeichner={Bezeichner}, Art={Art}, Verschleiss={Verschleiss}, Greifweite={greifweite}";
+            return $"Greifer: ID {Id}, Greifweite={greifweite}, (Art={Art}, Verschleiss={Verschleiss}%) ";
         }
         public override void Arbeiten()
         {
@@ -20,6 +20,7 @@ namespace AufgabeIndustrieroboterSteuerung
         public Greifer(string art, int verschleiss, int greifweite)
             : base(art, verschleiss)
         {
+            this.Bezeichner = "Greifer";
             this.greifweite = greifweite;
         }
 

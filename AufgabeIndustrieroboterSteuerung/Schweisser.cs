@@ -8,7 +8,7 @@ namespace AufgabeIndustrieroboterSteuerung
     {
         public override string Ausgeben()
         {
-            return $"Schweisser: ID={Id}, Bezeichner={Bezeichner}, Art={Art}, Verschleiss={Verschleiss}";
+            return $"Schweisser (ID={Id}, Art={Art}, Verschleiss={Verschleiss}%)";
         }
         public override void Arbeiten()
         {
@@ -19,6 +19,7 @@ namespace AufgabeIndustrieroboterSteuerung
          public Schweisser(string art, int verschleiss)
              : base(art, verschleiss)
          {
+            this.Bezeichner = "Schweisser";
         }
     }
 }
