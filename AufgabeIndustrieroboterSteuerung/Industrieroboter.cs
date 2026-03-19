@@ -33,7 +33,7 @@ namespace AufgabeIndustrieroboterSteuerung
                     throw new InvalidOperationException("Der Platz ist bereits belegt.");
                 }
                 Werkzeugkasten[index] = neu;
-                Console.WriteLine($"{neu.Bezeichner} {neu.Art} wurde Platz {index} zugewiesen.");
+                Console.WriteLine($"{neu.Ausgeben()} wurde Platz {index} zugewiesen.");
                 return true;
             }
             catch (Exception ex)
@@ -53,7 +53,7 @@ namespace AufgabeIndustrieroboterSteuerung
                 {
                     throw new InvalidOperationException("Der Platz ist bereits leer.");
                 }
-                Console.WriteLine($"{Werkzeugkasten[index].Ausgeben} auf Platz {index} wurde entfernt.");
+                Console.WriteLine($"{Werkzeugkasten[index].Ausgeben()} auf Platz {index} wurde entfernt.");
                 Werkzeugkasten[index] = null;
                 return true;
             }
