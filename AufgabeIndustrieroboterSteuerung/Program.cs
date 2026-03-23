@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void aMain(string[] args)
         {
             Industrieroboter industrieroboter = new Industrieroboter(1, "IR-1");
             Bohrer bohrer = new Bohrer("Bohrer1", 0, 10);

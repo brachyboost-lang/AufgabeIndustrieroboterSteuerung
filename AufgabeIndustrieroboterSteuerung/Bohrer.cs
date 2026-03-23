@@ -21,8 +21,15 @@ namespace AufgabeIndustrieroboterSteuerung
         }
         public override void Arbeiten()
         {
-            Console.WriteLine("Der Bohrer arbeitet.");
-            verschleiss += 5;
+            switch (Verschleiss)
+            {
+                case < 96:
+                    Console.WriteLine($"Der {Bezeichner} arbeitet mit Groesse {groesse}.");
+                    Verschleiss += 5;
+                    break;
+                default:
+                    throw new Exception("Das Werkzeug ist zu Verschlissen um damit zu Arbeiten.");
+            }
         }
     }
 }
