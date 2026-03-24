@@ -7,8 +7,8 @@ namespace AufgabeIndustrieroboterSteuerung
     public class Industrieroboter
     {
 
-        private int id { get; init; }
-        public int Id { get => id; }
+        private int id;
+        public int Id { get => id; init; }
         private string bezeichner;
         internal static readonly int maxAnzWerkzeuge = 10;
         Werkzeug[] Werkzeugkasten = new Werkzeug[Industrieroboter.maxAnzWerkzeuge];

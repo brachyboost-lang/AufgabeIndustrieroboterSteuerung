@@ -13,7 +13,7 @@ namespace AufgabeIndustrieroboterSteuerung.Application
         {
             _roboterVerwaltung = roboterVerwaltung;
         }
-        public WerkzeugHinzufuegen(Werkzeug werkzeug, int index, Industrieroboter roboter)
+        public void WerkzeugHinzufuegen(Werkzeug werkzeug, int index, Industrieroboter roboter)
         {
             var roboterFromRepo = _roboterVerwaltung.GetRoboterByID(roboter.Id);
 

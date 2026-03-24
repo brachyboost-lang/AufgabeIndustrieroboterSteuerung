@@ -5,12 +5,12 @@ using System.Text;
 
 namespace AufgabeIndustrieroboterSteuerung
 {
-    internal class InMemoryRoboterRepository : IRoboterVerwaltung
+    public class InMemoryRoboterRepository : IRoboterVerwaltung
     {
         Dictionary<int, Industrieroboter> _roboterStore = new();
         public void AddRoboter(Industrieroboter roboter)
         {
-            if (roboterSore.ContainsKey(roboter.Id))
+            if (_roboterStore.ContainsKey(roboter.Id))
             {
                 throw new InvalidOperationException($"Roboter mit dieser ID ({roboter.Id}) existiert bereits.");
             }
