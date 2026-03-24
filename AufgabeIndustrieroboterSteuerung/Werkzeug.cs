@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AufgabeIndustrieroboterSteuerung
 {
-    internal abstract class Werkzeug 
+    public abstract class Werkzeug 
     {
         private int id;
         public int Id { get => id; set { id = value;} }

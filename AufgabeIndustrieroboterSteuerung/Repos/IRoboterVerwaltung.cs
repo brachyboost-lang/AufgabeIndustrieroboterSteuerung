@@ -4,12 +4,12 @@ using System.Text;
 
 namespace AufgabeIndustrieroboterSteuerung.Repos
 {
-    internal interface IRoboterVerwaltung
+    public interface IRoboterVerwaltung
     {
         void AddRoboter(Industrieroboter roboter);
         // void RemoveRoboter(Industrieroboter roboter);
         void UpdateRoboter(Industrieroboter roboter);
-        // void ReadRoboter(Industrieroboter roboter);
+        Industrieroboter GetRoboterByID(int id);
         // IEnumerable<Industrieroboter> GetAllRoboter();
 
     }

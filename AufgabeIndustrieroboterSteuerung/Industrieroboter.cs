@@ -4,10 +4,11 @@ using System.Text;
 
 namespace AufgabeIndustrieroboterSteuerung
 {
-    internal class Industrieroboter
+    public class Industrieroboter
     {
 
-        private int id;
+        private int id { get; init; }
+        public int Id { get => id; }
         private string bezeichner;
         internal static readonly int maxAnzWerkzeuge = 10;
         Werkzeug[] Werkzeugkasten = new Werkzeug[Industrieroboter.maxAnzWerkzeuge];
